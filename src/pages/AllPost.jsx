@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const AllPost = () => {
   const [posts] = useState([
@@ -29,10 +30,18 @@ const AllPost = () => {
     <div className="container mx-auto px-4">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold">All Posts</h2>
-        <a href="#" className="text-blue-500 hover:underline">
-          View All
-        </a>
-      
+
+        <NavLink
+          to="/blogpost"
+          className={({ isActive }) =>
+            isActive
+              ? "text-purpleAccent font-semibold"
+              : "text-white font-semibold hover:text-purpleAccent"
+          }
+        >
+          {" "}
+          <div className="text-blue-500 hover:underline">View All</div>
+        </NavLink>
       </div>
       <div className="grid grid-cols-1 gap-4">
         {posts.map((post, index) => (
@@ -46,7 +55,6 @@ const AllPost = () => {
             <h3 className="text-xl font-heading font-bold text-primary pr-96 ">
               {post.title}
             </h3>
-            
           </div>
         ))}
       </div>

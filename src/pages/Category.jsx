@@ -61,7 +61,7 @@ const Category = () => {
           Lorem ipsum dolor sit amet, consectetur sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua
         </p>
-        <span className="font-semibold">BLOG > BUSINESS</span>
+        <span className="font-semibold">BLOG &lt; BUSINESS</span>
       </div>
 
       {/* Main Content - Left side (articles) and Right side (categories & tags) */}

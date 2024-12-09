@@ -2,6 +2,8 @@ import React from "react";
 import ManInWhiteShirtInFrontOfPC from "../assets/IMAGES/man-in-white-dress-shirt-sitting-on-black-rolling-chair-while-facing-black-computer-set-and-smiling-840996.svg";
 import categories from "./categories";
 import allPosts from "./allPosts";
+import { NavLink } from "react-router-dom";
+
 const Blog = () => {
   return (
     <>
@@ -95,9 +97,13 @@ const AllPosts = () => {
 const AllCategories = () => {
   return (
     <>
-      <h2 className="text-3xl font-heading font-bold ml-6 mt-4">
-        All Categories
-      </h2>
+      <NavLink
+            to="/category"
+            className= "text-3xl font-heading font-bold ml-6 mt-4 hover:underline"
+            
+          >
+            All Categories
+          </NavLink>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-4">
         {categories.map((category, index) => (
           <div
